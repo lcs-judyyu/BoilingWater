@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A94F25A27BC535A008BF282 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 5A94F25927BC535A008BF282 /* Lottie */; };
+		5A94F25D27BC53DB008BF282 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A94F25C27BC53DB008BF282 /* LottieView.swift */; };
+		5A94F25F27BC5407008BF282 /* 85710-sea-empty-state.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A94F25E27BC5407008BF282 /* 85710-sea-empty-state.json */; };
+		5A94F26127BC540E008BF282 /* 79611-water-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A94F26027BC540E008BF282 /* 79611-water-animation.json */; };
+		5A94F26327BC5416008BF282 /* 65837-clouds-in-the-sky.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A94F26227BC5416008BF282 /* 65837-clouds-in-the-sky.json */; };
+		5A94F26527BC541C008BF282 /* 23936-lighthouse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A94F26427BC541C008BF282 /* 23936-lighthouse.json */; };
 		5AEBDB6927BC0719004E2E28 /* BoilingWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEBDB6827BC0719004E2E28 /* BoilingWaterApp.swift */; };
 		5AEBDB6B27BC071A004E2E28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEBDB6A27BC071A004E2E28 /* ContentView.swift */; };
 		5AEBDB6D27BC0720004E2E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AEBDB6C27BC0720004E2E28 /* Assets.xcassets */; };
@@ -14,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A94F25C27BC53DB008BF282 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		5A94F25E27BC5407008BF282 /* 85710-sea-empty-state.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "85710-sea-empty-state.json"; sourceTree = "<group>"; };
+		5A94F26027BC540E008BF282 /* 79611-water-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "79611-water-animation.json"; sourceTree = "<group>"; };
+		5A94F26227BC5416008BF282 /* 65837-clouds-in-the-sky.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "65837-clouds-in-the-sky.json"; sourceTree = "<group>"; };
+		5A94F26427BC541C008BF282 /* 23936-lighthouse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "23936-lighthouse.json"; sourceTree = "<group>"; };
 		5AEBDB6527BC0719004E2E28 /* BoilingWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoilingWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AEBDB6827BC0719004E2E28 /* BoilingWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilingWaterApp.swift; sourceTree = "<group>"; };
 		5AEBDB6A27BC071A004E2E28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,12 +37,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A94F25A27BC535A008BF282 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A94F25B27BC5376008BF282 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				5A94F25C27BC53DB008BF282 /* LottieView.swift */,
+				5A94F25E27BC5407008BF282 /* 85710-sea-empty-state.json */,
+				5A94F26027BC540E008BF282 /* 79611-water-animation.json */,
+				5A94F26227BC5416008BF282 /* 65837-clouds-in-the-sky.json */,
+				5A94F26427BC541C008BF282 /* 23936-lighthouse.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		5AEBDB5C27BC0719004E2E28 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +75,7 @@
 		5AEBDB6727BC0719004E2E28 /* BoilingWater */ = {
 			isa = PBXGroup;
 			children = (
+				5A94F25B27BC5376008BF282 /* Animations */,
 				5AEBDB6827BC0719004E2E28 /* BoilingWaterApp.swift */,
 				5AEBDB6A27BC071A004E2E28 /* ContentView.swift */,
 				5AEBDB6C27BC0720004E2E28 /* Assets.xcassets */,
@@ -83,6 +108,9 @@
 			dependencies = (
 			);
 			name = BoilingWater;
+			packageProductDependencies = (
+				5A94F25927BC535A008BF282 /* Lottie */,
+			);
 			productName = BoilingWater;
 			productReference = 5AEBDB6527BC0719004E2E28 /* BoilingWater.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +139,9 @@
 				Base,
 			);
 			mainGroup = 5AEBDB5C27BC0719004E2E28;
+			packageReferences = (
+				5A94F25827BC535A008BF282 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 5AEBDB6627BC0719004E2E28 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +157,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AEBDB7027BC0720004E2E28 /* Preview Assets.xcassets in Resources */,
+				5A94F25F27BC5407008BF282 /* 85710-sea-empty-state.json in Resources */,
+				5A94F26327BC5416008BF282 /* 65837-clouds-in-the-sky.json in Resources */,
+				5A94F26527BC541C008BF282 /* 23936-lighthouse.json in Resources */,
 				5AEBDB6D27BC0720004E2E28 /* Assets.xcassets in Resources */,
+				5A94F26127BC540E008BF282 /* 79611-water-animation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +174,7 @@
 			files = (
 				5AEBDB6B27BC071A004E2E28 /* ContentView.swift in Sources */,
 				5AEBDB6927BC0719004E2E28 /* BoilingWaterApp.swift in Sources */,
+				5A94F25D27BC53DB008BF282 /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +375,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A94F25827BC535A008BF282 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A94F25927BC535A008BF282 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A94F25827BC535A008BF282 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5AEBDB5D27BC0719004E2E28 /* Project object */;
 }
