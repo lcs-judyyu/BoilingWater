@@ -9,8 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Slider(value: .constant(50.0),
+                   in: 80.0...200.0,
+                   step: 0.5,
+                   label: {
+                        Text("Opacity")
+            },
+                   minimumValueLabel: {
+                        Text("80")
+            },
+                   maximumValueLabel: {
+                        Text("200")
+            })
+        }
     }
 }
 
