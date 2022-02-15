@@ -63,12 +63,23 @@ struct ContentView: View {
                     .font(.title2)
                 
                 //some animation
-                //sea
                 
-                //land
-                
-                //air
-                
+                ZStack {
+                    //ocean
+                    LottieView(animationNamed: "79611-water-animation")
+                        .opacity(atmosphericPressure > 100 ? 1.0 : 0.0)
+                        .padding()
+                    
+                    //sea level
+                    LottieView(animationNamed: "23936-lighthouse")
+                        .opacity(atmosphericPressure == 100 ? 1.0 : 0.0)
+                        .padding()
+                    
+                    //sky
+                    LottieView(animationNamed: "65837-clouds-in-the-sky")
+                        .opacity(atmosphericPressure < 100 ? 1.0 : 0.0)
+                        .padding()
+                }
                 
                 Spacer()
             }
