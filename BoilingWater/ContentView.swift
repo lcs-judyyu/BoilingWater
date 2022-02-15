@@ -10,29 +10,24 @@ import SwiftUI
 struct ContentView: View {
     
     //MARK: Stored Properties
-    
+    @State var temperature: Double = 100.0
     
     //MARK: Computed Properties
-    
+    var atmosphericPressure: Double {
+        return temperature * 5 - 400
+    }
     
     var body: some View {
         VStack(spacing: 20) {
-            // Input
+            //title
+            Text("Boiling Water")
+                .font(.title)
+            
+            //input
             Text("Temperature at which water begins to boil (∘C):")
                 .bold()
             
-            Group {
-                // Show the selected temperature value
-                HStack {
-                    Spacer()
-                    Text("100")
-                        .font(.title2)
-                        .bold()
-                    Spacer()
-                }
-            }
-            
-            Slider(value: .constant(100.0),
+            Slider(value: $temperature,
                    in: 80.0...200.0,
                    step: 0.5,
                    label: {
@@ -45,12 +40,13 @@ struct ContentView: View {
                 Text("200")
             })
             //show slider value
-            Text("100")
+            Text("\(String(format:"%.0f", temperature))")
                 .font(.title2)
                 .bold()
             
             //output
-            Text("The atmospheric pressure is 0 kPa, at sea level")
+            Text("The atmospheric pressure is" + "\(atmosphericPressure)" + "kPa, " + "at sea level")
+                .font(.title2)
             
             //some animation
             //sea
