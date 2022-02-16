@@ -32,10 +32,12 @@ struct ContentView: View {
         ZStack {
             Color.blue.opacity(0.1)
                 .edgesIgnoringSafeArea(.all)
+            
             VStack(spacing: 30) {
                 //title
                 Text("Boiling Water")
-                    .font(.title)
+                    .font(Font.custom("Apple Chancery", size: 30))
+                    .bold()
                 
                 //input
                 Text("Temperature at which water begins to boil (°C):")
@@ -43,7 +45,7 @@ struct ContentView: View {
                 
                 Slider(value: $temperature,
                        in: 80.0...200.0,
-                       step: 0.5,
+                       step: 1.0,
                        label: {
                     Text("Temperature at which water begins to boil (°C):")
                 },
@@ -59,15 +61,18 @@ struct ContentView: View {
                     .bold()
                 
                 //output
-                Text("The atmospheric pressure is " + "\(atmosphericPressure)" + " kPa, " + "\(seaLevel)")
+                Text("The atmospheric pressure is " + "\(atmosphericPressure)" + " kPa, ")
                     .font(.title2)
+                + Text("\(seaLevel)")
+                    .font(.title2)
+                    .bold()
                 
                 //some animation
                 
                 ZStack {
                     //ocean
                     LottieView(animationNamed: "79611-water-animation")
-                        .opacity(atmosphericPressure > 100 ? 1.0 : 0.0)
+                        .opacity(atmosphericPressure > 100  ? 1.0 : 0.0)
                         .padding()
                     
                     //sea level

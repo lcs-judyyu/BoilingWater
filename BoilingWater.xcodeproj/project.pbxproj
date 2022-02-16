@@ -13,6 +13,7 @@
 		5A94F26127BC540E008BF282 /* 79611-water-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A94F26027BC540E008BF282 /* 79611-water-animation.json */; };
 		5A94F26327BC5416008BF282 /* 65837-clouds-in-the-sky.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A94F26227BC5416008BF282 /* 65837-clouds-in-the-sky.json */; };
 		5A94F26527BC541C008BF282 /* 23936-lighthouse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A94F26427BC541C008BF282 /* 23936-lighthouse.json */; };
+		5A94F26927BCAA0F008BF282 /* Apple Chancery.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A94F26827BCAA0F008BF282 /* Apple Chancery.ttf */; };
 		5AEBDB6927BC0719004E2E28 /* BoilingWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEBDB6827BC0719004E2E28 /* BoilingWaterApp.swift */; };
 		5AEBDB6B27BC071A004E2E28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEBDB6A27BC071A004E2E28 /* ContentView.swift */; };
 		5AEBDB6D27BC0720004E2E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AEBDB6C27BC0720004E2E28 /* Assets.xcassets */; };
@@ -25,6 +26,8 @@
 		5A94F26027BC540E008BF282 /* 79611-water-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "79611-water-animation.json"; sourceTree = "<group>"; };
 		5A94F26227BC5416008BF282 /* 65837-clouds-in-the-sky.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "65837-clouds-in-the-sky.json"; sourceTree = "<group>"; };
 		5A94F26427BC541C008BF282 /* 23936-lighthouse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "23936-lighthouse.json"; sourceTree = "<group>"; };
+		5A94F26727BCA5A8008BF282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5A94F26827BCAA0F008BF282 /* Apple Chancery.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Apple Chancery.ttf"; path = "../../../../../../../System/Library/Fonts/Supplemental/Apple Chancery.ttf"; sourceTree = "<group>"; };
 		5AEBDB6527BC0719004E2E28 /* BoilingWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoilingWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AEBDB6827BC0719004E2E28 /* BoilingWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilingWaterApp.swift; sourceTree = "<group>"; };
 		5AEBDB6A27BC071A004E2E28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,9 +78,11 @@
 		5AEBDB6727BC0719004E2E28 /* BoilingWater */ = {
 			isa = PBXGroup;
 			children = (
+				5A94F26727BCA5A8008BF282 /* Info.plist */,
 				5A94F25B27BC5376008BF282 /* Animations */,
 				5AEBDB6827BC0719004E2E28 /* BoilingWaterApp.swift */,
 				5AEBDB6A27BC071A004E2E28 /* ContentView.swift */,
+				5A94F26827BCAA0F008BF282 /* Apple Chancery.ttf */,
 				5AEBDB6C27BC0720004E2E28 /* Assets.xcassets */,
 				5AEBDB6E27BC0720004E2E28 /* Preview Content */,
 			);
@@ -160,6 +165,7 @@
 				5A94F25F27BC5407008BF282 /* 85710-sea-empty-state.json in Resources */,
 				5A94F26327BC5416008BF282 /* 65837-clouds-in-the-sky.json in Resources */,
 				5A94F26527BC541C008BF282 /* 23936-lighthouse.json in Resources */,
+				5A94F26927BCAA0F008BF282 /* Apple Chancery.ttf in Resources */,
 				5AEBDB6D27BC0720004E2E28 /* Assets.xcassets in Resources */,
 				5A94F26127BC540E008BF282 /* 79611-water-animation.json in Resources */,
 			);
@@ -307,6 +313,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BoilingWater/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BoilingWater/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -335,6 +342,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BoilingWater/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BoilingWater/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
