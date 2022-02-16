@@ -29,6 +29,14 @@ struct ContentView: View {
     }
     
     var body: some View {
+        
+        //bind slider value to stepper value
+        let temperatureBinding = Binding(get: {
+            return self.temperature
+        }, set: { newTemperature in
+            self.temperature = newTemperature
+        })
+        
         ZStack {
             Color.blue.opacity(0.1)
                 .edgesIgnoringSafeArea(.all)
@@ -43,9 +51,9 @@ struct ContentView: View {
                 Text("Temperature at which water begins to boil (°C):")
                     .bold()
                 
-                Slider(value: $temperature,
+                Slider(value: temperatureBinding,
                        in: 80.0...200.0,
-                       step: 1.0,
+                       step: 0.5,
                        label: {
                     Text("Temperature at which water begins to boil (°C):")
                 },
@@ -55,10 +63,21 @@ struct ContentView: View {
                        maximumValueLabel: {
                     Text("200")
                 })
-                //show slider value
-                Text("\(String(format:"%.1f", temperature))")
-                    .font(.title2)
-                    .bold()
+                
+                HStack(spacing: 0) {
+                    
+                    //show slider value
+                    Text("\(String(format:"%.1f", temperature))")
+                        .font(.title2)
+                        .bold()
+                    
+                    //stepper
+                    Stepper("",
+                            value: temperatureBinding,
+                            in: 80.0...200.0,
+                            step: 0.5)
+                }
+                .padding(.horizontal)
                 
                 //output
                 Text("The atmospheric pressure is " + "\(atmosphericPressure)" + " kPa, ")
@@ -72,7 +91,7 @@ struct ContentView: View {
                 ZStack {
                     //ocean
                     LottieView(animationNamed: "79611-water-animation")
-                        .opacity(atmosphericPressure > 100  ? 1.0 : 0.0)
+                        .opacity(atmosphericPressure > 100 ? 1.0 : 0.0)
                         .padding()
                     
                     //sea level
