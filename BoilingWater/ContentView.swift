@@ -92,16 +92,19 @@ struct ContentView: View {
                     //ocean
                     LottieView(animationNamed: "79611-water-animation")
                         .opacity(atmosphericPressure > 100 ? 1.0 : 0.0)
+                        .animation(.default, value: atmosphericPressure)
                         .padding()
                     
                     //sea level
                     LottieView(animationNamed: "23936-lighthouse")
                         .opacity(atmosphericPressure == 100 ? 1.0 : 0.0)
+                        .animation(.default, value: atmosphericPressure)
                         .padding()
                     
                     //sky
                     LottieView(animationNamed: "65837-clouds-in-the-sky")
                         .opacity(atmosphericPressure < 100 ? 1.0 : 0.0)
+                        .animation(.default, value: atmosphericPressure)
                         .padding()
                 }
                 
